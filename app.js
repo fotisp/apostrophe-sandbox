@@ -114,7 +114,8 @@ var site = require('apostrophe-site')({
       files: ["./public/js/modules/_site.js"]
     },
     'apostrophe-demo-login': {
-    }
+    },
+    'super-duper':{}
   },
 
   // These are assets we want to push to the browser.

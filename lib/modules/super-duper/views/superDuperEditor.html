@@ -1,0 +1,20 @@
+{% extends "baseWidgetEditor.html" %}
+
+{% block modalClass %}
+  {{ super() }} super-duper-editor apos-ui-modal-no-sidebar
+{% endblock%}
+
+
+{% block modalLabel %}
+  Available Dupers
+{% endblock %}
+
+
+{% block modalInstructions %}
+  Select available Dupers for Page
+{% endblock %}
+
+{% block formBody %}
+  <label>Available Dupers</label>
+  <div id="available-dupers"></div>
+{% endblock %}

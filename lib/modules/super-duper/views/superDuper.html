@@ -1,0 +1,11 @@
+<ul class="extra">
+  {% if item._failed %}
+  <li>No CTAs Selected</li>
+{% else %}
+  {% for cta in item._ctas %}
+    <li>
+      <strong>{{ cta.label }}</strong> {{ cta.data }}
+    </li>
+  {% endfor %}
+{% endif %}
+</ul>

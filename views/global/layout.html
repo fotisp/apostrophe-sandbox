@@ -35,7 +35,20 @@
           </a>
 
         </header>
-      {% block headerContent %}
+
+        <div class="cta-container">
+          <div class="container">
+            <div class="row cta">
+              <div class="col-xs-12">
+                {% block cta %}
+                  {{ aposSingleton(page, 'superDupers', 'superDuper' ) }}
+                {% endblock %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% block headerContent %}
       {% endblock %}
     </div>
   </div>
@@ -46,6 +59,8 @@
 {% endblock %}
 
 {% block main %}
+
+
   {# most content will be just fine sitting within our 'block' class, but we always #}
   {# have the option to override the 'main' block if we want a little more control. #}
   {% block mainContent %}
