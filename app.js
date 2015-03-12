@@ -44,6 +44,7 @@ var site = require('apostrophe-site')({
     types: [
       { name: 'default', label: 'Default Page' },
       { name: 'home', label: 'Home Page' },
+      { name: 'brands', label: 'Brands Page' },
       { name: 'blog', label: 'Blog' }
     ]
   },
@@ -115,7 +116,31 @@ var site = require('apostrophe-site')({
     },
     'apostrophe-demo-login': {
     },
-    'super-duper':{}
+    'brands':{
+      extend: 'apostrophe-snippets',
+      name: 'brands',
+      label: 'Brands',
+      instance: 'brand',
+      instanceLabel: 'Brand',
+      browser: {
+        construct: 'ToyotaBrands'
+      },
+      removeFields: ['body','hideTitle' ],
+      addFields:[
+        {
+          name:'brochure',
+          type: 'singleton',
+          widgetType: 'files',
+          options:{
+            limit: 1
+          }
+        }
+      ]
+    },
+    'brand-loader':{
+
+
+    }
   },
 
   // These are assets we want to push to the browser.

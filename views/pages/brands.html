@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block bodyClass %}{{ super() }} home-page{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block main %}
+  <ul>
+
+  {% for brand in _brands %}
+    <li>{{  brand.title }} == {{  brand._pdf }}</li>
+  {% endfor %}
+
+  </ul>
+{% endblock %}
